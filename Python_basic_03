@@ -1,0 +1,12 @@
+#Division
+
+if __name__ == '__main__':
+    a = int(input())
+    b = int(input())
+    
+    # Calculate the result of integer division (a // b) and print it
+    print(a // b)
+    
+    # Calculate the result of float division (a / b) and print it
+    print(a / b)
+
