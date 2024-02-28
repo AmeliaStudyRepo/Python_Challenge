@@ -1,0 +1,13 @@
+#Incorrect_Regex
+# Enter your code here. Read input from STDIN. Print output to STDOUT
+import re
+
+if __name__ == '__main__':
+    n = int(input())
+    for _ in range(n):
+        regex = input()
+        try:
+            re.compile(regex)
+            print("True")
+        except re.error:
+            print("False")
