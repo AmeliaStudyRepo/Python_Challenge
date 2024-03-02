@@ -1,0 +1,9 @@
+#Built_Ins_Python_Evaluatioln
+# Enter your code here. Read input from STDIN. Print output to STDOUT
+from __future__ import print_function  # Only for Python 2 users
+
+if __name__ == '__main__':
+    expression = input()
+    eval(expression)
+
+
