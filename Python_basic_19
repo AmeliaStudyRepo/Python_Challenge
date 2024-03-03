@@ -1,0 +1,14 @@
+#check_in_session
+#Question: Write a function that takes two numbers as input and returns their sum.
+def add_numbers(num1, num2):
+    return num1 + num2
+sum = add_numbers(1, 7)
+print(sum)
+
+
+def fix_spelling(name):
+  if name == 'twittr':
+    name = 'twitter'
+  else
+    fix_spelling(name)
+  return name
