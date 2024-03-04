@@ -1,0 +1,18 @@
+#Check_Subset
+# Enter your code here. Read input from STDIN. Print output to STDOUT
+def is_subset(set_A, set_B):
+    return set_A.issubset(set_B)
+
+if __name__ == "__main__":
+    test_cases = int(input().strip())
+    for _ in range(test_cases):
+        size_A = int(input().strip())
+        set_A = set(map(int, input().strip().split()))
+        size_B = int(input().strip())
+        set_B = set(map(int, input().strip().split()))
+        
+        result = is_subset(set_A, set_B)
+        print(result)
+
+
+
