@@ -1,0 +1,16 @@
+#Check_Strict_Superset
+# Enter your code here. Read input from STDIN. Print output to STDOUT
+if __name__ == "__main__":
+    set_A = set(map(int, input().split()))
+    num_sets = int(input())
+    
+    is_strict_superset = True
+    
+    for _ in range(num_sets):
+        set_B = set(map(int, input().split()))
+        if not set_A.issuperset(set_B) or len(set_A) <= len(set_B):
+            is_strict_superset = False
+            break
+            
+    print(is_strict_superset)
+
