@@ -1,0 +1,14 @@
+#Compress_the_String
+# Enter your code here. Read input from STDIN. Print output to STDOUT
+from itertools import groupby
+
+def compress_string(s):
+    compressed_string = ""
+    for key, group in groupby(s):
+        compressed_string += f"({len(list(group))}, {key}) "
+    return compressed_string.strip()
+
+if __name__ == '__main__':
+    s = input()
+    result = compress_string(s)
+    print(result)
