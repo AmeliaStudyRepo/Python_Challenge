@@ -1,0 +1,30 @@
+#Set.symmetric_difference()_Operation
+# Enter your code here. Read input from STDIN. Print output to STDOUT
+def english_or_french_not_both(english_count, english_roll_numbers, french_count, french_roll_numbers):
+    english_set = set(english_roll_numbers)
+    french_set = set(french_roll_numbers)
+    
+    # Find the set of students who have subscribed either to English or French newspapers but not both
+    english_or_french_not_both_set = english_set.symmetric_difference(french_set)
+    # Alternatively, you can use the ^ operator: english_or_french_not_both_set = english_set ^ french_set
+    
+    # Count the number of students who have subscribed either to English or French newspapers but not both
+    english_or_french_not_both_count = len(english_or_french_not_both_set)
+    
+    return english_or_french_not_both_count
+
+if __name__ == "__main__":
+    # Input the number of students who have subscribed to the English newspaper
+    english_count = int(input())
+    # Input the roll numbers of students who have subscribed to the English newspaper
+    english_roll_numbers = list(map(int, input().split()))
+    # Input the number of students who have subscribed to the French newspaper
+    french_count = int(input())
+    # Input the roll numbers of students who have subscribed to the French newspaper
+    french_roll_numbers = list(map(int, input().split()))
+    
+    # Get the count of students who have subscribed either to English or French newspapers but not both
+    result = english_or_french_not_both(english_count, english_roll_numbers, french_count, french_roll_numbers)
+    
+    # Output the result
+    print(result)
